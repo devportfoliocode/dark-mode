@@ -1,0 +1,91 @@
+/* ----- Reset ----- */
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ----- Variáveis ----- */
+:root{
+    --body-bg: #fff;
+    --body-color: #000;
+}
+
+.dark-mode:root{
+    --body-bg: #212529;
+    --body-color: #b3c2cd;
+}
+
+
+/* ----- Geral ----- */
+body{
+    background-color: var(--body-bg);
+    color: var(--body-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 50px;
+}
+
+.dark-box{
+    align-self: center;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 5px;
+    right: 30px;
+    width: 80px;
+}
+
+.dark-label{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dark-toggle{
+    display: none;
+}
+
+.dark-sol,
+.dark-lua{
+    height: 26px;
+}
+
+.dark-lua{
+    filter: invert();
+}
+
+.dark-toggle-bola{
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 26px;
+    position: absolute;
+    transition: .5s;
+    width: 26px;
+}
+
+.dark-toggle:checked + label .dark-toggle-bola{
+    transform: translateX(44px)
+}
+
+
+/* ----- Textos ----- */
+.sobre-titulo{
+    font-size: 3rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sobre-texto{
+    margin-top: 12px;
+    text-align: center;
+}
